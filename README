@@ -1,0 +1,5 @@
+Redirect to Subpage
+Version 1.0
+Written by Huib Keemink
+
+When enabled, this action redirects the user to the first subpage associated with the page.
