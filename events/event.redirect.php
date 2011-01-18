@@ -40,7 +40,7 @@
 				return false;
 			}
 			else{
-				header ('Location: '.$this->_env['param']['root'].'/'.$path.'/'.$row['handle']);
+				header ('Location: '.$this->_env['param']['root'].'/'.$path.'/'.$row['handle'] . '/');
 				die();
 			}
 		}
