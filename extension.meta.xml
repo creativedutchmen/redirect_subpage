@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="redirect_subpage" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Redirect to Subpage</name>
+	<description>Provides an event that redirects the user to the first subpage associated with a page.</description>
+	<repo type="github">https://github.com/creativedutchmen/redirect_subpage</repo>
+	<url type="discuss">http://getsymphony.com/discuss/thread/31936/</url>
+	<types>
+		<type></type>
+	</types>
+	<authors>
+		<author>
+			<name github="creativedutchmen" symphony="creativedutchmen">Huib Keemink</name>
+			<website>http://www.creativedutchmen.com</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.1" date="2012-08-13" min="2.3">
+<![CDATA[
+- Compatibility with Symphony 2.3
+]]>
+		</release>
+		<release version="1.0.1" date="2012-08-13" min="2.2" max="2.2.x">
+<![CDATA[
+- Code cleanup. Final release for Symphony 2.2.x.
+]]>
+		</release>
+		<release version="1.0" date="2009-10-05" min="2.2" max="2.2.x"/>
+	</releases>
+</extension>
