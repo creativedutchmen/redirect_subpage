@@ -1,16 +1,16 @@
 <?php
 
 	require_once(TOOLKIT . '/class.entrymanager.php');
-	
-	
+
+
 	Class extension_redirect_subpage extends Extension{
-	
+
 		protected $section_data;
 		protected $_page;
 		protected $static_section_name;
-		
+
 		static $alreadyRan = false;
-		
+
 		public function about(){
 			return array('name' => 'Redirect to Subpage',
 						 'version' => '1.0',
