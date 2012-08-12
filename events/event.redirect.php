@@ -29,18 +29,19 @@
 		}
 
 		protected function __trigger(){
-			if($this->_env['param']['parent-path'] == '/'){
-				$path = $this->_env['param']['current-page'];
+			$params = Frontend::instance()->Page()->Params();
+			if($params['parent-path'] == '/'){
+				$path = $params['current-page'];
 			}
 			else{
-				$path = substr($this->_env['param']['parent-path'].'/'.$this->_env['param']['current-page'],1);
+				$path = substr($params['parent-path'].'/'.$params['current-page'],1);
 			}
-            $row = $this->_Parent->Database->fetchRow(0, "SELECT * from tbl_pages where path = '".$path."' ORDER BY sortorder ASC");
+            $row = Symphony::Database()->fetchRow(0, "SELECT * from tbl_pages where path = '".$path."' ORDER BY sortorder ASC");
 			if(empty($row)){
 				return false;
 			}
 			else{
-				header ('Location: '.$this->_env['param']['root'].'/'.$path.'/'.$row['handle'] . '/');
+				header ('Location: '.$params['root'].'/'.$path.'/'.$row['handle'] . '/');
 				die();
 			}
 		}
