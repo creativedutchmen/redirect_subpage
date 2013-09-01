@@ -5,11 +5,11 @@
 	require_once(TOOLKIT . '/class.event.php');
 
 	Class eventRedirect extends Event{
-		
+
 		public static function about(){
-			
+
 			$description = new XMLElement('p', 'This event redirects the users to the first subpage attached to the page');
-					
+
 			return array(
 						 'name' => 'Subpage Redirect',
 						 'author' => array('name' => 'Huib Keemink',
@@ -17,17 +17,17 @@
 										   'email' => 'huib@creativedutchmen.com'),
 						 'version' => '1.0',
 						 'release-date' => '2008-11-10',
-						 'trigger-condition' => '');						 
+						 'trigger-condition' => '');
 		}
-				
-		public function load(){			
+
+		public function load(){
 			return $this->__trigger();
 		}
 
 		public static function documentation(){
 			return 'Redirects the user to the first subpage associated with the page';
 		}
-		
+
 		protected function __trigger(){
 			if($this->_env['param']['parent-path'] == '/'){
 				$path = $this->_env['param']['current-page'];
